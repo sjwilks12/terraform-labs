@@ -5,7 +5,7 @@ variable "loc" {
 
 variable "webapplocs" {
     description = "Web app locations"
-    default     =   [ "eastus2", "uksouth", "centralindia" ]
+    default     =   []
 }
 
 variable "tags" {
