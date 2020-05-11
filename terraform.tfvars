@@ -5,4 +5,4 @@ tags    = {
     env     = "training"
 }
 
-webapplocs = [ "eastus2", "centralus" ]
+webapplocs = [ "westus", "eastus" ]

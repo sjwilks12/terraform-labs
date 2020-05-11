@@ -14,16 +14,16 @@ resource "random_string" "webapprnd" {
 
 resource "azurerm_app_service_plan" "free" {
     count               = "${length(var.webapplocs)}"
-    name                = "plan-free-${var.webapplocs[count.index]}"
+    name                = "plan-std-${var.webapplocs[count.index]}"
     location            = "${var.webapplocs[count.index]}"
     resource_group_name = "${azurerm_resource_group.webapps.name}"
     tags                = "${azurerm_resource_group.webapps.tags}"
 
-    kind                = "Windows"
+    kind                = "Linux"
     reserved            = true
     sku {
-        tier = "Free"
-        size = "F1"
+        tier = "Standard"
+        size = "S1"
     }
 }
 
